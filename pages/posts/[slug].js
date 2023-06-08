@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
-import { dummyPosts } from './dumyPosts';
+import { dummyPosts } from '../../public/dumyPosts';
 import ImageGallery from '../../components/ImageGallery';
 import TagsComponent from '../../components/TagComponent';
 const components = {

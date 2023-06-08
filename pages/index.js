@@ -6,7 +6,7 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import ImageGallery from '../components/ImageGallery';
-import { dummyPosts } from "./posts/dumyPosts";
+import { dummyPosts } from "../public/dumyPosts";
 import TagsComponent from '../components/TagComponent';
 export default function Index({ posts, globalData }) {
   return (
