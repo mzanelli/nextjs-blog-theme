@@ -1,3 +1,4 @@
+import GoogleAnalytics from '../components/GoogleAnalytics';
 import '../styles/globals.css';
 import 'prismjs/themes/prism-tomorrow.css';
 
@@ -6,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <span className="theme-bejamas" />
       <Component {...pageProps} />
+      <GoogleAnalytics/>
     </>
   );
 }
