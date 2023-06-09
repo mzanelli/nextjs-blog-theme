@@ -97,5 +97,34 @@ export const dummyPosts = [
     
     ],
     content: "<p>Republican Rep. Lauren Boebert of Colorado is under fire for comments she made about Rep. Ilhan Omar, a Democrat from Minnesota.</p>\n<p>Boebert said that Omar, who is Muslim, is a 'jihad squad member' and that she should 'go back where she came from.'</p>\n<p>Omar has condemned Boebert's comments as 'Islamophobic.'</p>\n<p>Boebert has since apologized for her comments, but the controversy has led to calls for her to resign.</p>\n<p>Boebert is a controversial figure who has made a number of inflammatory statements in the past.</p>\n<p>She is a supporter of former President Donald Trump and has been a vocal critic of the Biden administration.</p>\n<p>Boebert's comments about Omar have sparked a debate about Islamophobia in the United States.</p>\n<p>Omar is one of the first two Muslim women to serve in Congress.</p>\n<p>Her election has been a source of pride for many Muslims in the United States.</p>\n<p>However, her election has also led to an increase in Islamophobia.</p>\n<p>Boebert's comments are just one example of the Islamophobia that Omar has faced since her election.</p>\n<p>Omar has said that she has been subjected to death threats and harassment since she took office.</p>\n<p>The Islamophobia that Omar has faced is a reminder of the challenges that Muslims face in the United States.</p>"
+  },
+  {
+    "id": "1234567890",
+    "title": "China's economy grows at slowest pace in 27 years",
+    "description": "China's economy grew at its slowest pace in 27 years in the first quarter of 2023. The slowdown was due to a number of factors, including the ongoing COVID-19 pandemic, the war in Ukraine, and government restrictions on the property sector.",
+    "date": "2023-06-09",
+    "slug": "china-economy-grows-at-slowest-pace-in-27-years",
+    "tags": [
+      {
+        "label": "Economy"
+      },
+      {
+        "label": "China"
+      },
+      {
+        "label": "Growth"
+      }
+    ],
+    "images": [
+      {
+        "path": "https://marketbusinessnews.com/wp-content/uploads/2014/03/1473090461.jpg",
+        "name": "china-economy-grows-at-slowest-pace-in-27-years-1.jpg"
+      },
+      {
+        "path": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F60003194-a706-11e9-89e4-5e7e89de8df9.jpg?crop=6091%2C3426%2C0%2C317&resize=1500",
+        "name": "china-economy-grows-at-slowest-pace-in-27-years-2.jpg"
+      }
+    ],
+    "content": "<p>China's economy grew at its slowest pace in 27 years in the first quarter of 2023. The slowdown was due to a number of factors, including the ongoing COVID-19 pandemic, the war in Ukraine, and government restrictions on the property sector.</p><p>The Chinese government has said that it expects the economy to grow by 5.5% in 2023. However, some economists believe that the economy may grow at a slower pace than this.</p><p>The slowdown in the Chinese economy is having a knock-on effect on the global economy. China is a major trading partner for many countries, and the slowdown in its economy is leading to a decline in demand for goods and services from other countries.</p><p>The slowdown in the Chinese economy is also having a negative impact on the global stock market. The Chinese stock market has been one of the worst performing stock markets in the world in recent months.</p><p>The slowdown in the Chinese economy is a major concern for the global economy. If the economy continues to slow down, it could lead to a global recession.</p>"
   }
 ];

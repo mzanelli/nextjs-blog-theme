@@ -90,16 +90,16 @@ export default function Index({ posts, globalData }) {
                       {post.date}
                     </p>
                   )}
-                  <h2 className="text-2xl md:text-3xl">{post.title}</h2>
+                  <h2 style={{opacity:"0.6"}} className="text-2xl md:text-3xl">{post.title}</h2>
                   {post.description && (
                     <p className="mt-3 text-lg opacity-60">
                       {post.description}
                     </p>
                   )}
-                  <ImageGallery images={post.images}></ImageGallery>
                   <ArrowIcon className="mt-4" />
                 </a>
               </Link>
+              <ImageGallery images={post.images}></ImageGallery>
               <TagsComponent handleTagClick={handleTagClick} tags={post.tags} />
             </li>
           ))}
@@ -121,5 +121,6 @@ export default function Index({ posts, globalData }) {
 export function getStaticProps(context) {
   const globalData = getGlobalData();
   const posts = dummyPosts;
+  posts.sort((a, b) => new Date(b.date) - new Date(a.date));
   return { props: {  posts,globalData } };
 }

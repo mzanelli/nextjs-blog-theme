@@ -97,9 +97,19 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: pointer;
+  color: #000;
+  opacity:0.6;
+
 }
 
 .tag.selected {
   background-color: #007bff;
-  color: #fff;
+  color: #f0efef
+}
+
+.remove-filter-button{
+  position: relative;
+  top: -10px;
+  left: -27px;
+  color: #f0efef
 }

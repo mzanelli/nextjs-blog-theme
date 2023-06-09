@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Filters = ({ selectedTag, handleTagRemove }) => {
   if (!selectedTag) {
@@ -7,13 +9,13 @@ const Filters = ({ selectedTag, handleTagRemove }) => {
   console.log(selectedTag)
   return (
     <div className="filters-container">
-        <span>Filters: </span>
-      <div className="tag selected">
+        <span style={{color:"#000", marginLeft:"24px",opacity:"0.6"}}>Filters: </span>
+      <div className="tag selected" style={{width:"115px"}}>
         {selectedTag.label}
-        <button className="remove-btn" onClick={() => handleTagRemove()}>
-          x
-        </button>
       </div>
+      <button className="remove-filter-button" onClick={handleTagRemove}>
+      <FontAwesomeIcon icon={faTimes} />
+    </button>
     </div>
   );
 };
