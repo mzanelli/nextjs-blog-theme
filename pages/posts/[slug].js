@@ -4,7 +4,7 @@ import Link from 'next/link';
 import ArrowIcon from '../../components/ArrowIcon';
 import CustomLink from '../../components/CustomLink';
 import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+import HeaderWeb from '../../components/HeaderWeb';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
 import { dummyPosts } from '../../public/dumyPosts';
@@ -31,26 +31,27 @@ export default function PostPage({
   };
 
   return (
-    <Layout>
+    <div>
+      <HeaderWeb name={globalData.name} />
+      <Layout>
       <SEO
         title={`${post.title} - ${globalData.name}`}
         description={post.description}
       />
-      <Header name={globalData.name} />
-
+      
       <article className="px-6 md:px-0">
         <header>
-          <h1 style={{opacity:"0.6"}} className="text-3xl md:text-5xl dark:text-white text-center mb-12">
+          <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-8 mt-4 opacity-60">
             {post.title}
           </h1>
           {post.description && (
-            <p className="text-xl mb-4">{post.description}</p>
+            <p className="text-xl mb-8 opacity-60">{post.description}</p>
           )}
         </header>
         <ImageGallery images={post.images}></ImageGallery>
         <main>
           <article
-            className="prose dark:prose-dark"
+            className="main-text mt-8 mb-8"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </main>
@@ -62,10 +63,10 @@ export default function PostPage({
                 <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
                   Previous
                 </p>
-                <h4 className="text-2xl text-gray-700 mb-6 dark:text-white">
+                <h4 className="text-2xl text-gray-700 mb-6 dark:text-white opacity-60">
                   {prevPost.title}
                 </h4>
-                <ArrowIcon className="transform rotate-180 mx-auto md:mr-0 mt-auto" />
+                <ArrowIcon right={false} className="transform rotate-180 mx-auto md:mr-0 mt-auto" />
               </a>
             </Link>
           )}
@@ -75,10 +76,10 @@ export default function PostPage({
                 <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
                   Next
                 </p>
-                <h4 className="text-2xl text-gray-700 mb-6 dark:text-white">
+                <h4 className="text-2xl text-gray-700 mb-6 dark:text-white opacity-60">
                   {nextPost.title}
                 </h4>
-                <ArrowIcon className="mt-auto mx-auto md:ml-0" />
+                <ArrowIcon right={true} className="mt-auto mx-auto md:ml-0" />
               </a>
             </Link>
           )}
@@ -94,6 +95,7 @@ export default function PostPage({
         className="absolute bottom-0 opacity-20 dark:opacity-10"
       />
     </Layout>
+    </div>
   );
 }
 

@@ -99,7 +99,7 @@ export const dummyPosts = [
     content: "<p>Republican Rep. Lauren Boebert of Colorado is under fire for comments she made about Rep. Ilhan Omar, a Democrat from Minnesota.</p>\n<p>Boebert said that Omar, who is Muslim, is a 'jihad squad member' and that she should 'go back where she came from.'</p>\n<p>Omar has condemned Boebert's comments as 'Islamophobic.'</p>\n<p>Boebert has since apologized for her comments, but the controversy has led to calls for her to resign.</p>\n<p>Boebert is a controversial figure who has made a number of inflammatory statements in the past.</p>\n<p>She is a supporter of former President Donald Trump and has been a vocal critic of the Biden administration.</p>\n<p>Boebert's comments about Omar have sparked a debate about Islamophobia in the United States.</p>\n<p>Omar is one of the first two Muslim women to serve in Congress.</p>\n<p>Her election has been a source of pride for many Muslims in the United States.</p>\n<p>However, her election has also led to an increase in Islamophobia.</p>\n<p>Boebert's comments are just one example of the Islamophobia that Omar has faced since her election.</p>\n<p>Omar has said that she has been subjected to death threats and harassment since she took office.</p>\n<p>The Islamophobia that Omar has faced is a reminder of the challenges that Muslims face in the United States.</p>"
   },
   {
-    "id": "1234567890",
+    "id": 5,
     "title": "China's economy grows at slowest pace in 27 years",
     "description": "China's economy grew at its slowest pace in 27 years in the first quarter of 2023. The slowdown was due to a number of factors, including the ongoing COVID-19 pandemic, the war in Ukraine, and government restrictions on the property sector.",
     "date": "2023-06-09",
@@ -126,5 +126,30 @@ export const dummyPosts = [
       }
     ],
     "content": "<p>China's economy grew at its slowest pace in 27 years in the first quarter of 2023. The slowdown was due to a number of factors, including the ongoing COVID-19 pandemic, the war in Ukraine, and government restrictions on the property sector.</p><p>The Chinese government has said that it expects the economy to grow by 5.5% in 2023. However, some economists believe that the economy may grow at a slower pace than this.</p><p>The slowdown in the Chinese economy is having a knock-on effect on the global economy. China is a major trading partner for many countries, and the slowdown in its economy is leading to a decline in demand for goods and services from other countries.</p><p>The slowdown in the Chinese economy is also having a negative impact on the global stock market. The Chinese stock market has been one of the worst performing stock markets in the world in recent months.</p><p>The slowdown in the Chinese economy is a major concern for the global economy. If the economy continues to slow down, it could lead to a global recession.</p>"
+  },
+  {
+    "id": 6,
+    "title": "Former President Donald Trump Indicted",
+    "description": "Former President Donald Trump was indicted on charges of making false statements to federal investigators about classified documents he took to his Florida home after leaving office.",
+    "date": "2023-06-10",
+    "slug": "former-president-donald-trump-indicted",
+    "images": [
+      {
+        "id": 1,
+        "path": "https://imagenes.elpais.com/resizer/W0DvpdH-07n0SMUoPuzeblgrj_w=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/CYCF35YGTH3YMVOUJVGLFGXENU.jpg",
+        "name": "donald-trump-indicted"
+      }
+    ],
+    "content": "<p>Former President Donald Trump was indicted on charges of making false statements to federal investigators about classified documents he took to his Florida home after leaving office.</p>"
+    + "<p>The indictment is the second criminal case against Trump, who is also facing a criminal investigation in Georgia for his alleged role in trying to overturn the results of the 2020 election.</p>"
+    + "<p>The indictment charges Trump with one count of making false statements to investigators and one count of obstructing justice.</p>"
+    + "<p>Trump is accused of making false statements to the House Select Committee investigating the January 6 attack on the U.S. Capitol. He is also accused of obstructing justice by trying to influence the testimony of witnesses.</p>"
+    + "<p>Trump has denied the allegations against him.</p> <br> "
+    + "Source: cnn",
+    "tags": [
+      {
+        "label": "Politics"
+      }
+    ]
   }
 ];

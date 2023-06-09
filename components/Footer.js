@@ -79,11 +79,11 @@ const ThemeSwitcher = () => {
 
 export default function Footer({ copyrightText }) {
   return (
-    <footer className="py-16 flex flex-col items-center">
-      <p className="dark:text-white uppercase mb-3 font-bold opacity-60">
-        {copyrightText}
+    <footer style={{width:"100%"}} className="py-16 flex flex-col items-center">
+      <p className="dark:text-white mt-8 mb-3 font-bold opacity-60">
+        <div>@2023 Chronist.com</div>
+        <div>All Rights Reserver</div>
       </p>
-      <ThemeSwitcher />
     </footer>
   );
 }

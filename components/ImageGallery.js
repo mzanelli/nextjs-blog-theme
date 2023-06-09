@@ -13,7 +13,7 @@ const ImageGallery = ({ images }) => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  const showButtons = images.length > 1; // Check if there is more than one image
+  const showButtons = images.length > 1; 
 
   return (
     <div className="image-gallery">
@@ -28,6 +28,7 @@ const ImageGallery = ({ images }) => {
           alt={images[currentImageIndex].name}
           width="100%"
           height="100%"
+          className='rounded-image'
         />
         {showButtons && (
           <button className="image-button right-button" onClick={nextImage}>
