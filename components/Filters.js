@@ -2,9 +2,9 @@ import React from 'react';
 
 const Filters = ({ selectedTag, handleTagRemove }) => {
   if (!selectedTag) {
-    return null; // If no tag is selected, don't display the filters
+    return null; 
   }
-
+  console.log(selectedTag)
   return (
     <div className="filters-container">
         <span>Filters: </span>

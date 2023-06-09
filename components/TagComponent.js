@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+const TagsComponent = ({ tags, handleTagClick }) => {
+  const [selectedTag, setSelectedTag] = useState(null);
+  const router = useRouter();
+  const handleClick = (tag) => {
+    handleTagClick(tag);
+    setSelectedTag(tag);
+    //router.push({ pathname: '/', query: { tag: tag.label } });
+  };
 
-const TagsComponent = ({ tags }) => {
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <div className="tags-container">
       {tags.map((tag, index) => (
         <div
           key={index}
-          className='tags'
+          className={`tag ${selectedTag === tag ? 'selected' : ''}`}
+          onClick={() => handleClick(tag)}
         >
           {tag.label}
         </div>

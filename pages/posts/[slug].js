@@ -9,6 +9,7 @@ import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
 import { dummyPosts } from '../../public/dumyPosts';
 import ImageGallery from '../../components/ImageGallery';
+import { useRouter } from 'next/router';
 import TagsComponent from '../../components/TagComponent';
 const components = {
   a: CustomLink,
@@ -23,6 +24,11 @@ export default function PostPage({
 }) {
   const showPrevPostButton = prevPost !== null;
   const showNextPostButton = nextPost !== null;
+  const router = useRouter();
+  const handleTagClick = (tag) => {
+    const queryParams = new URLSearchParams({ tag: tag.label }).toString();
+    router.push(`/?${queryParams}`);
+  };
 
   return (
     <Layout>
@@ -42,14 +48,13 @@ export default function PostPage({
           )}
         </header>
         <ImageGallery images={post.images}></ImageGallery>
-
         <main>
           <article
             className="prose dark:prose-dark"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </main>
-        <TagsComponent tags={post.tags} />
+        <TagsComponent tags={post.tags} handleTagClick={handleTagClick} />
         <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
           {showPrevPostButton && (
             <Link href={`/posts/${prevPost.slug}`}>
