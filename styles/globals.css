@@ -129,7 +129,7 @@ body {
 
 .navi-container{
   display: flex;
-  height: 40px;
+  height: 60px;
   background-color: rgb(0, 101, 162);
   padding-left: 8px;
 }

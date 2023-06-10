@@ -4,9 +4,14 @@ import Image from 'next/image';
 import SVGLogo from './SVGLogo';
 
 const Header = ({ name }) => {
+
+
+
+
+
   useEffect(() => {
     const googleAnalyticsScript = document.createElement('script');
-    googleAnalyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-VG0DJG638B';
+    googleAnalyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-0EQ65L7WPY';
     googleAnalyticsScript.async = true;
     document.body.appendChild(googleAnalyticsScript);
 
