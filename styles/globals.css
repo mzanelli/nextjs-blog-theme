@@ -120,7 +120,7 @@ body {
 .logo-web{
   width: 30px;
   height: 30px;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 
 .navi-bar{
@@ -137,7 +137,7 @@ body {
 .navi-cia{
   color: #fff;
   margin-left: 8px;
-  margin-top: 6px;
+  margin-top: 16px;
   font-size: 20px;
   font-weight: bolder;
   font-style: oblique;

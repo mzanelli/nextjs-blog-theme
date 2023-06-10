@@ -4,7 +4,7 @@ export const getGlobalData = () => {
     : '';
   const blogTitle = process.env.BLOG_TITLE
     ? decodeURI(process.env.BLOG_TITLE)
-    : 'All Most Important Topics Today';
+    : 'chronist.netlify.app';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
     : '';
