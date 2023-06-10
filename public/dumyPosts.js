@@ -177,6 +177,71 @@ export const dummyPosts = [
         "label": "Politics"
       }
     ]
+  },
+  {
+    "id": 8,
+    "title": "Donald Trump Indicted on Charges of Lying and Obstructing Justice in the Handling of Classified Documents",
+    "description": "The indictment, which was unsealed on Tuesday, alleges that Trump took classified documents from the White House and brought them to his Mar-a-Lago resort, where they were not properly secured. The charges carry a maximum sentence of five years in prison. Trump has denied the charges.",
+    "date": "2023-06-11",
+    "images":[
+      {
+        "id": 1,
+        "path": "https://pixabay.com/photos/donald-trump-us-president-495987/",
+        "name": "Donald Trump"
+      }
+    ],
+    "content": "<p>Donald Trump was indicted on charges of lying and obstructing justice in the handling of classified documents on Tuesday.</p>"+
+    "<p>The indictment, which was unsealed by the Justice Department, alleges that Trump took classified documents from the White House and brought them to his Mar-a-Lago resort, where they were not properly secured.</p>"+
+    "<p>The charges carry a maximum sentence of five years in prison. Trump has denied the charges.</p>",
+    "tags": [
+      {
+        "label": "Politics"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    iamges:[
+      {
+        "id": 2,
+        "path": "https://pixabay.com/photos/supreme-court-justices-usa-332294/",
+        "name": "Supreme Court Justices"
+      }
+    ],
+    "title": "Supreme Court Upholds Voting Rights Act, But Weakens It Significantly",
+    "description": "The Court's 6-3 decision on Tuesday gutted a key provision of the Voting Rights Act, which had required certain states with a history of discrimination to obtain federal approval before making changes to their voting laws. The decision is a major victory for Republicans, who have long sought to weaken the Voting Rights Act.",
+    "date": "2023-06-11",
+    "slug": "supreme-court-voting-rights-act",
+    "content": "<p>The Supreme Court upheld the Voting Rights Act on Tuesday, but weakened it significantly.</p>"+
+    "<p>The Court's 6-3 decision gutted a key provision of the Voting Rights Act, which had required certain states with a history of discrimination to obtain federal approval before making changes to their voting laws.</p>"+
+    "<p>The decision is a major victory for Republicans, who have long sought to weaken the Voting Rights Act.</p>",
+    "tags": [
+      {
+        "label": "Law"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "House Republicans Unveil Broad Package of Tax Cuts",
+    images:[
+      {
+        "id": 3,
+        "path": "https://pixabay.com/photos/tax-return-money-finance-334038/",
+        "name": "Tax Return"
+      }
+    ],
+    "description": "The plan, which was released on Tuesday, would cut taxes for businesses and individuals. It would also repeal the Affordable Care Act's individual mandate, which requires most Americans to have health insurance. The plan is unlikely to pass the Senate, where Democrats have a majority.",
+    "date": "2023-06-11",
+    "slug": "house-republicans-tax-cuts",
+    "content": "<p>House Republicans unveiled a broad package of tax cuts on Tuesday.</p>"+
+    "<p>The plan, which was released by Ways and Means Committee Chairman Kevin Brady (R-Texas), would cut taxes for businesses and individuals. It would also repeal the Affordable Care Act's individual mandate, which requires most Americans to have health insurance.</p>"+
+    "<p>The plan is unlikely to pass the Senate, where Democrats have a majority.</p>",
+    "tags": [
+      {
+        "label": "Economy"
+      }
+    ]
   }
   
 ];

@@ -1,3 +1,5 @@
+import { getGlobalData } from '../utils/global-data';
+
 const sunIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -78,10 +80,12 @@ const ThemeSwitcher = () => {
 };
 
 export default function Footer({ copyrightText }) {
+  const globalData = getGlobalData();
+
   return (
     <footer style={{width:"100%"}} className="py-16 flex flex-col items-center">
       <p className="dark:text-white mt-8 mb-3 font-bold opacity-60">
-        <div>@2023 Chronist.netlify.app</div>
+        <div>@2023 {getGlobalData.name}</div>
         <div>All Rights Reserver</div>
       </p>
     </footer>

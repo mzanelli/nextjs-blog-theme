@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import SVGLogoWeb from './SVGLogoWeb';
-
+import { getGlobalData } from '../utils/global-data';
 const HeaderWeb = ({ name }) => {
+
+ 
+
   useEffect(() => {
     const googleAnalyticsScript = document.createElement('script');
     googleAnalyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-0EQ65L7WPY';
@@ -25,8 +27,10 @@ const HeaderWeb = ({ name }) => {
       // Clean up the scripts when the component unmounts
       document.body.removeChild(googleAnalyticsScript);
       //document.body.removeChild(adsenseScript);
+
     };
   }, []);
+  const globalData = getGlobalData();
 
   return (
     <header className="navi-bar">
@@ -34,7 +38,7 @@ const HeaderWeb = ({ name }) => {
         <a>
           <div className='navi-container'>
             <SVGLogoWeb />
-            <div className='navi-cia'>Chronist.netlify.app</div>
+            <div className='navi-cia'>{globalData.name}</div>
           </div>
         </a>
       </Link>  
