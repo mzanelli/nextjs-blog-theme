@@ -13,11 +13,13 @@ export const dummyPosts = [
     images: [
       {
         path: "https://i.insider.com/6296096dff955c0019c60b74?width=1000&format=jpeg&auto=webp",
-        name: "Gas Prices in the United States 2022"
+        name: "Gas Prices in the United States 2022",
+        id:100
       },
       {
         path: "https://i.pinimg.com/originals/e2/91/5b/e2915bf789cfa0611fe08470f6849ed8.jpg",
-        name: "Woman in a gas station"
+        name: "Woman in a gas station",
+        id:101
       }
     ],
     content: "<p>Gas prices have been on the rise for months, and there is no sign of relief in sight. The national average for a gallon of regular unleaded gasoline is now $3.55, and it's even higher in some parts of the country.</p>"
@@ -201,7 +203,7 @@ export const dummyPosts = [
   },
   {
     "id": 9,
-    iamges:[
+    "images":[
       {
         "id": 2,
         "path": "https://pixabay.com/photos/supreme-court-justices-usa-332294/",
@@ -224,7 +226,7 @@ export const dummyPosts = [
   {
     "id": 10,
     "title": "House Republicans Unveil Broad Package of Tax Cuts",
-    images:[
+    "images":[
       {
         "id": 3,
         "path": "https://pixabay.com/photos/tax-return-money-finance-334038/",

@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import SVGLogoWeb from './SVGLogoWeb';
-import { getGlobalData } from '../utils/global-data';
 const HeaderWeb = ({ name }) => {
-
- 
-
   useEffect(() => {
     const googleAnalyticsScript = document.createElement('script');
     googleAnalyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-0EQ65L7WPY';
@@ -15,7 +11,7 @@ const HeaderWeb = ({ name }) => {
     const adsenseScript = document.createElement('script');
     adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1342088144413315';
     adsenseScript.crossOrigin = 'anonymous';
-    //document.body.appendChild(adsenseScript);
+    document.body.appendChild(adsenseScript);
 
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -30,7 +26,6 @@ const HeaderWeb = ({ name }) => {
 
     };
   }, []);
-  const globalData = getGlobalData();
 
   return (
     <header className="navi-bar">
@@ -38,7 +33,7 @@ const HeaderWeb = ({ name }) => {
         <a>
           <div className='navi-container'>
             <SVGLogoWeb />
-            <div className='navi-cia'>{globalData.name}</div>
+            <div className='navi-cia'>{name}</div>
           </div>
         </a>
       </Link>  
