@@ -151,5 +151,32 @@ export const dummyPosts = [
         "label": "Politics"
       }
     ]
+  },
+  {
+    "id": 7,
+    "title": "Former U.K. Prime Minister Boris Johnson resigns after probe into 'partygate' statements.",
+    "description": "Johnson, who has been under increasing pressure to resign for months over a series of parties held at 10 Downing Street during the COVID-19 pandemic, finally announced his resignation on Thursday. He will remain in office until a new leader is chosen.",
+    "date": "2023-06-10",
+    "slug": "former-uk-prime-minister-boris-johnson-resigns-after-probe-into-partygate-statements",
+    "images": [
+      {
+        "id": 1,
+        "path": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/vivo/live/images/2023/6/10/0e3e76f2-1b0d-415a-8597-86b8cc4d6155.jpg",
+        "name": "boris-johnson-resigns"
+      }
+    ],
+    "content": "<p>Former U.K. Prime Minister Boris Johnson resigned on Thursday after a series of scandals, including a partygate probe into gatherings held at 10 Downing Street during the COVID-19 pandemic.</p>"+
+    "<p>Johnson, who has been under increasing pressure to resign for months, finally announced his decision to step down in a televised address to the nation. He said he would remain in office until a new leader is chosen.</p>"+
+    "<p>Johnson's resignation comes after a tumultuous few years in office. He was elected Prime Minister in 2019 on a promise to 'get Brexit done.' However, he has been dogged by controversy ever since, including allegations of lying to Parliament and breaking the law.</p>"+
+    "<p>The partygate scandal was the final straw for many Conservative MPs, who had previously been willing to overlook Johnson's other scandals. The scandal involved a series of parties held at 10 Downing Street during the COVID-19 pandemic, when such gatherings were banned under lockdown rules.</p>"+
+    "<p>Johnson has apologized for the parties, but he has refused to resign. However, the pressure on him to step down became too much, and he finally announced his resignation on Thursday.</p>"+
+    "<p>Johnson's resignation is a major blow to the Conservative Party. He was a popular figure among voters, and his resignation could lead to a period of instability for the party.</p>"+
+    "<p>It is not yet clear who will replace Johnson as Prime Minister. However, the race is likely to be fierce, and the outcome could have a major impact on the future of the Conservative Party and the United Kingdom.</p>",
+    "tags": [
+      {
+        "label": "Politics"
+      }
+    ]
   }
+  
 ];
