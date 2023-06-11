@@ -180,27 +180,7 @@ export const dummyPosts = [
       }
     ]
   },
-  {
-    "id": 8,
-    "title": "Donald Trump Indicted on Charges of Lying and Obstructing Justice in the Handling of Classified Documents",
-    "description": "The indictment, which was unsealed on Tuesday, alleges that Trump took classified documents from the White House and brought them to his Mar-a-Lago resort, where they were not properly secured. The charges carry a maximum sentence of five years in prison. Trump has denied the charges.",
-    "date": "2023-06-11",
-    "images":[
-      {
-        "id": 1,
-        "path": "https://cdn.pixabay.com/photo/2017/10/31/09/06/words-2904676_1280.jpg",
-        "name": "Donald Trump"
-      }
-    ],
-    "content": "<p>Donald Trump was indicted on charges of lying and obstructing justice in the handling of classified documents on Tuesday.</p>"+
-    "<p>The indictment, which was unsealed by the Justice Department, alleges that Trump took classified documents from the White House and brought them to his Mar-a-Lago resort, where they were not properly secured.</p>"+
-    "<p>The charges carry a maximum sentence of five years in prison. Trump has denied the charges.</p>",
-    "tags": [
-      {
-        "label": "Politics"
-      }
-    ]
-  },
+  
   {
     "id": 9,
     "images":[
@@ -245,5 +225,4 @@ export const dummyPosts = [
       }
     ]
   }
-  
 ];
