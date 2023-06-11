@@ -188,7 +188,7 @@ export const dummyPosts = [
     "images":[
       {
         "id": 1,
-        "path": "https://pixabay.com/photos/donald-trump-us-president-495987/",
+        "path": "https://cdn.pixabay.com/photo/2017/10/31/09/06/words-2904676_1280.jpg",
         "name": "Donald Trump"
       }
     ],
@@ -206,7 +206,7 @@ export const dummyPosts = [
     "images":[
       {
         "id": 2,
-        "path": "https://pixabay.com/photos/supreme-court-justices-usa-332294/",
+        "path": "https://cdn.pixabay.com/photo/2017/04/12/20/56/us-supreme-court-building-2225765_640.jpg",
         "name": "Supreme Court Justices"
       }
     ],
@@ -229,7 +229,7 @@ export const dummyPosts = [
     "images":[
       {
         "id": 3,
-        "path": "https://pixabay.com/photos/tax-return-money-finance-334038/",
+        "path": "https://cdn.pixabay.com/photo/2018/01/20/15/28/tax-consultant-3094819_1280.jpg",
         "name": "Tax Return"
       }
     ],
