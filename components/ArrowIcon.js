@@ -22,8 +22,6 @@ export default function ArrowIcon({ right, className, color = 'text-primary' }) 
         ></path>
       </svg>
       {!right && <div className="continue-reading">Continue reading</div>}
-
-      <Tooltip id="my-tooltip"  />
     </div>
   );
 }

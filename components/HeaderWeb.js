@@ -1,7 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import Link from 'next/link';
 import SVGLogoWeb from './SVGLogoWeb';
-const HeaderWeb = ({ name }) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faBars } from '@fortawesome/free-solid-svg-icons';
+import Drawer from './Drawer';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root'); // Configura el elemento raíz de tu aplicación
+const HeaderWeb = ({ name, tags }) => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const googleAnalyticsScript = document.createElement('script');
     googleAnalyticsScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-0EQ65L7WPY';
@@ -20,24 +29,45 @@ const HeaderWeb = ({ name }) => {
     gtag('config', 'G-0EQ65L7WPY');
 
     return () => {
-      // Clean up the scripts when the component unmounts
       document.body.removeChild(googleAnalyticsScript);
       document.body.removeChild(adsenseScript);
-
     };
   }, []);
 
+    const openModal = () => {
+      console.log("open")
+      setIsOpen(true);
+    };
+
+    const closeModal = () => {
+      console.log("close")
+      setIsOpen(false);
+    };
+
   return (
-    <header className="navi-bar">
-     <Link href="/">
-        <a>
-          <div className='navi-container'>
-            <SVGLogoWeb />
-            <div className='navi-cia'>{name}</div>
-          </div>
-        </a>
-      </Link>  
-    </header>
+    <>
+      <Modal
+       isOpen={isOpen} 
+       onRequestClose={closeModal} 
+       className="Modal"
+       overlayClassName="Overlay"
+       >
+        <Drawer close={closeModal}/>
+      </Modal>
+      <header className="navi-bar navi-container">
+              <Link href="/">
+              <a>
+                  <div className='navi-logo'> 
+                    <SVGLogoWeb />
+                    <div className='navi-cia'>{name}</div>
+                  </div>
+              </a>
+              </Link>  
+              <div className="hamburger-container">
+                  <FontAwesomeIcon onClick={openModal} className="hamburger" icon={faBars} />
+              </div>
+      </header>
+    </>
   );
 };
 

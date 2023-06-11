@@ -10,7 +10,6 @@ import TagsComponent from '../components/TagComponent';
 import { useRouter } from 'next/router';
 
 import { useState,useEffect } from 'react';
-import Filters from '../components/Filters';
 import HeaderWeb from '../components/HeaderWeb';
 
 export default function Index({ posts, globalData }) {
