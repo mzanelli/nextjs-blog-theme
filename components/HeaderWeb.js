@@ -22,7 +22,7 @@ const HeaderWeb = ({ name }) => {
     return () => {
       // Clean up the scripts when the component unmounts
       document.body.removeChild(googleAnalyticsScript);
-      //document.body.removeChild(adsenseScript);
+      document.body.removeChild(adsenseScript);
 
     };
   }, []);
