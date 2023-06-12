@@ -116,6 +116,9 @@ body {
 
 .navi-bar{
   width: 100%;
+  position: sticky;
+  z-index: 200;
+  top:0px;
 }
 
 .hamburger-container {
