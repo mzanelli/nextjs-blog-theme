@@ -12,12 +12,12 @@ export const dummyPosts = [
     ],
     images: [
       {
-        path: "https://i.insider.com/6296096dff955c0019c60b74?width=1000&format=jpeg&auto=webp",
+        url: "https://i.insider.com/6296096dff955c0019c60b74?width=1000&format=jpeg&auto=webp",
         name: "Gas Prices in the United States 2022",
         id:100
       },
       {
-        path: "https://i.pinimg.com/originals/e2/91/5b/e2915bf789cfa0611fe08470f6849ed8.jpg",
+        url: "https://i.pinimg.com/originals/e2/91/5b/e2915bf789cfa0611fe08470f6849ed8.jpg",
         name: "Woman in a gas station",
         id:101
       }
@@ -43,11 +43,11 @@ export const dummyPosts = [
     
     images: [
       {
-        path: "https://images.pexels.com/photos/5632379/pexels-photo-5632379.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        url: "https://images.pexels.com/photos/5632379/pexels-photo-5632379.jpeg?auto=compress&cs=tinysrgb&w=1600",
         name: "image1"
       },
       {
-        path: "https://www.pexels.com/photo/shopping-cart-next-to-a-laptop-5632397/",
+        url: "https://www.pexels.com/photo/shopping-cart-next-to-a-laptop-5632397/",
         name: "image2"
       }
     ],
@@ -68,11 +68,11 @@ export const dummyPosts = [
     ,
     images: [
     {
-      path: "https://www.wric.com/wp-content/uploads/sites/74/2022/10/20221006_161715.jpg?w=2560&h=1440&crop=1",
+      url: "https://www.wric.com/wp-content/uploads/sites/74/2022/10/20221006_161715.jpg?w=2560&h=1440&crop=1",
       name: "plane-crash-virginia"
     },
     {
-      path: "https://wtop.com/wp-content/uploads/2019/11/wheel.jpg",
+      url: "https://wtop.com/wp-content/uploads/2019/11/wheel.jpg",
       name: "plane-crash-virginia2"
     }
     ],
@@ -93,7 +93,7 @@ export const dummyPosts = [
     ,
     images: [
     {
-      path: "https://people.com/thmb/0LmpNd8_eCXH2dseiNg7yEtEREU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/Lauren-Boebert-Ilhan-Omar-f1951861b1ee4799ab4d1af51d6d8468.jpg",
+      url: "https://people.com/thmb/0LmpNd8_eCXH2dseiNg7yEtEREU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/Lauren-Boebert-Ilhan-Omar-f1951861b1ee4799ab4d1af51d6d8468.jpg",
       name: "lauren-boebert-under-fire"
     },
     
@@ -119,11 +119,11 @@ export const dummyPosts = [
     ],
     "images": [
       {
-        "path": "https://marketbusinessnews.com/wp-content/uploads/2014/03/1473090461.jpg",
+        "url": "https://marketbusinessnews.com/wp-content/uploads/2014/03/1473090461.jpg",
         "name": "china-economy-grows-at-slowest-pace-in-27-years-1.jpg"
       },
       {
-        "path": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F60003194-a706-11e9-89e4-5e7e89de8df9.jpg?crop=6091%2C3426%2C0%2C317&resize=1500",
+        "url": "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F60003194-a706-11e9-89e4-5e7e89de8df9.jpg?crop=6091%2C3426%2C0%2C317&resize=1500",
         "name": "china-economy-grows-at-slowest-pace-in-27-years-2.jpg"
       }
     ],
@@ -138,7 +138,7 @@ export const dummyPosts = [
     "images": [
       {
         "id": 1,
-        "path": "https://imagenes.elpais.com/resizer/W0DvpdH-07n0SMUoPuzeblgrj_w=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/CYCF35YGTH3YMVOUJVGLFGXENU.jpg",
+        "url": "https://imagenes.elpais.com/resizer/W0DvpdH-07n0SMUoPuzeblgrj_w=/1200x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/CYCF35YGTH3YMVOUJVGLFGXENU.jpg",
         "name": "donald-trump-indicted"
       }
     ],
@@ -163,7 +163,7 @@ export const dummyPosts = [
     "images": [
       {
         "id": 1,
-        "path": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/vivo/live/images/2023/6/10/0e3e76f2-1b0d-415a-8597-86b8cc4d6155.jpg",
+        "url": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/vivo/live/images/2023/6/10/0e3e76f2-1b0d-415a-8597-86b8cc4d6155.jpg",
         "name": "boris-johnson-resigns"
       }
     ],
@@ -186,7 +186,7 @@ export const dummyPosts = [
     "images":[
       {
         "id": 2,
-        "path": "https://cdn.pixabay.com/photo/2017/04/12/20/56/us-supreme-court-building-2225765_640.jpg",
+        "url": "https://cdn.pixabay.com/photo/2017/04/12/20/56/us-supreme-court-building-2225765_640.jpg",
         "name": "Supreme Court Justices"
       }
     ],
@@ -209,7 +209,7 @@ export const dummyPosts = [
     "images":[
       {
         "id": 3,
-        "path": "https://cdn.pixabay.com/photo/2018/01/20/15/28/tax-consultant-3094819_1280.jpg",
+        "url": "https://cdn.pixabay.com/photo/2018/01/20/15/28/tax-consultant-3094819_1280.jpg",
         "name": "Tax Return"
       }
     ],
@@ -244,6 +244,35 @@ export const dummyPosts = [
         "label": "Transportation"
       }
     ]
+  },
+  {
+    "id": 12345,
+    "title": "Apple Unveils New MacBook Air with M2 Chip",
+    "description": "Apple on Tuesday unveiled a new MacBook Air with the M2 chip, a redesigned unibody chassis, a larger 13.6-inch Liquid Retina display, and a MagSafe charging port. The new MacBook Air starts at $1,199 and is available to order now.",
+    "date": "2023-06-12",
+    "slug": "apple-unveils-new-macbook-air-with-m2-chip",
+    "images": [
+      {
+        "id": 1,
+        "url": "https://images.hindustantimes.com/tech/img/2022/07/29/960x540/IMG_4284_1657976137822_1659067579143_1659067579143.jpg",
+        "name": "MacBook Air M2 2023"
+      }
+    ],
+    "content": "<p>Apple on Tuesday unveiled a new MacBook Air with the M2 chip, a redesigned unibody chassis, a larger 13.6-inch Liquid Retina display, and a MagSafe charging port.</p>"+
+    "<p>The new MacBook Air starts at $1,199 and is available to order now.</p>"+
+    "<ul>"+
+    "   <li>The M2 chip is a new generation of Apple silicon that is up to 18% faster than the M1 chip.</li>"+
+    "  <li>The new unibody chassis is made from 100% recycled aluminum and is thinner and lighter than the previous MacBook Air.</li>"+
+    "   <li>The larger 13.6-inch Liquid Retina display has a higher resolution and wider color gamut than the previous display.</li>"+
+    "  <li>The MagSafe charging port makes it easier and more convenient to charge the MacBook Air.</li>"+
+    "</ul>"+
+    " <p>The new MacBook Air is available in four colors: silver, space gray, starlight, and midnight.</p>",
+    "tags": [
+      {
+        "label": "Technology"
+      }
+    ]
   }
+  
   
 ];

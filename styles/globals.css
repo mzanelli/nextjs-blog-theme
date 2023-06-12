@@ -176,7 +176,7 @@ body {
   top: 0px;
   right: 5px;
   background-color: #cbd5eb;
-  width: 250px;
+  width: 350px;
   border-color: #fff;
   transition: transform 0.3s ease-in-out;
 }
@@ -206,6 +206,11 @@ body {
   font-size: 18px;
   font-weight: bold;
   margin-left: 25px;
+}
+
+.drawer-menu{
+  display: flex;
+
 }
 
 .drawer-item{

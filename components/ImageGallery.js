@@ -24,7 +24,7 @@ const ImageGallery = ({ images }) => {
           </button>
         )}
         <img
-          src={images[currentImageIndex].path}
+          src={images[currentImageIndex].url}
           alt={images[currentImageIndex].name}
           width="100%"
           height="100%"
