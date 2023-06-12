@@ -224,5 +224,26 @@ export const dummyPosts = [
         "label": "Economy"
       }
     ]
+  },
+  {
+    "id": 11,
+    "title": "Truck fire causes section of I-95 in Philadelphia to collapse",
+    "description": "A truck fire caused a section of Interstate 95 in Philadelphia to collapse on Tuesday morning, causing major traffic delays and stranding hundreds of motorists. The fire is still under investigation, but officials believe it may have been caused by a mechanical problem with the truck.",
+    "date": "2023-06-12",
+    "slug": "truck-fire-i-95-philadelphia",
+    "images": [
+      {
+        "id": 1,
+        "url": "https://ca-times.brightspotcdn.com/dims4/default/5f03502/2147483647/strip/true/crop/6336x3471+0+0/resize/1200x657!/format/webp/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F5e%2Fcf%2Fabe7f62034904059e406e04b0698%2F7781c7f5921a4279b341822d1de9a3c6",
+        "name": "Truck fire"
+      }
+    ],
+    "content": "<p>A truck fire caused a section of Interstate 95 in Philadelphia to collapse on Tuesday morning, causing major traffic delays and stranding hundreds of motorists.</p>\n\n<p>The fire is still under investigation, but officials believe it may have been caused by a mechanical problem with the truck.</p>\n\n<p>The collapse of the highway caused a major traffic jam, and motorists were stranded for hours.</p>\n\n<p>The fire department was able to extinguish the fire, but the damage to the highway was extensive.</p>\n\n<p>The highway is expected to be closed for several days while repairs are made.</p>",
+    "tags": [
+      {
+        "label": "Transportation"
+      }
+    ]
   }
+  
 ];
