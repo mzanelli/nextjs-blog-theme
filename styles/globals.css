@@ -176,7 +176,7 @@ body {
 
 .Modal {
   position: absolute;
-  top: 0px;
+  top: 60px;
   right: 5px;
   background-color: #cbd5eb;
   width: 350px;

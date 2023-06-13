@@ -246,7 +246,7 @@ export const dummyPosts = [
     ]
   },
   {
-    "id": 12345,
+    "id": 12,
     "title": "Apple Unveils New MacBook Air with M2 Chip",
     "description": "Apple on Tuesday unveiled a new MacBook Air with the M2 chip, a redesigned unibody chassis, a larger 13.6-inch Liquid Retina display, and a MagSafe charging port. The new MacBook Air starts at $1,199 and is available to order now.",
     "date": "2023-06-12",
@@ -270,6 +270,29 @@ export const dummyPosts = [
     "tags": [
       {
         "label": "Technology"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Biden signs executive order to protect abortion rights",
+    "description": "President Biden signed an executive order on Friday aimed at protecting abortion rights in the wake of the Supreme Court's decision to overturn Roe v. Wade. The order directs the Department of Health and Human Services to take steps to protect access to medication abortion and contraception, and to ensure that pregnant women have access to emergency medical care.",
+    "date": "2023-06-24",
+    "slug": "biden-signs-executive-order-to-protect-abortion-rights",
+    "images": [
+      {
+        "id": 1,
+        "url": "https://media.istockphoto.com/id/1372085253/es/foto/derechos-de-la-mujer.jpg?s=1024x1024&w=is&k=20&c=X3Oo5WH25GgMTdnnSElFbHMCYOVFmUzN0ICbExjUPT8=",
+        "name": "Woman protest pro-choice abortion"
+      }
+    ],
+    "content": "<p>President Biden signed an executive order on Friday aimed at protecting abortion rights in the wake of the Supreme Court's decision to overturn Roe v. Wade. The order directs the Department of Health and Human Services to take steps to protect access to medication abortion and contraception, and to ensure that pregnant women have access to emergency medical care.</p><p>The order also calls on the Department of Justice to work to protect women's access to abortion by challenging state laws that restrict or ban abortion.</p><p>Biden said in a statement that the order is 'an important first step' in protecting abortion rights, but that 'much more needs to be done.'</p><p>'The Supreme Court has made it clear that the only way to secure a woman's right to choose is by voting, by electing officials who will defend and protect that right,' he said.</p>",
+    "tags": [
+      {
+        "label": "Politics"
+      },
+      {
+        "label": "Abortion"
       }
     ]
   }
