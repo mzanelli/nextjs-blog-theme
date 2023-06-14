@@ -277,7 +277,7 @@ export const dummyPosts = [
     "id": 13,
     "title": "Biden signs executive order to protect abortion rights",
     "description": "President Biden signed an executive order on Friday aimed at protecting abortion rights in the wake of the Supreme Court's decision to overturn Roe v. Wade. The order directs the Department of Health and Human Services to take steps to protect access to medication abortion and contraception, and to ensure that pregnant women have access to emergency medical care.",
-    "date": "2023-06-24",
+    "date": "2023-06-13",
     "slug": "biden-signs-executive-order-to-protect-abortion-rights",
     "images": [
       {
@@ -293,6 +293,29 @@ export const dummyPosts = [
       },
       {
         "label": "Abortion"
+      }
+    ]
+  },
+  {
+    id: 14,
+    title: "New York City in deal with teachers union, 5-year pact with over 15% wage hike",
+    description: "New York City Mayor Eric Adams and the city's teachers union have reached a tentative agreement on a new contract that includes a 15% pay raise over five years. The deal, which still needs to be ratified by union members, would avert a strike that had been threatened by the union.",
+    date: "2023-06-14",
+    slug: "new-york-city-teachers-union-deal",
+    images: [
+      {
+        id: 12345,
+        url: "https://www.the74million.org/wp-content/uploads/2020/09/zoe9.18.jpg",
+        name: "Teachers Union Protest"
+      }
+    ],
+    content: "<p>New York City Mayor Eric Adams and the city's teachers union have reached a tentative agreement on a new contract that includes a 15% pay raise over five years. The deal, which still needs to be ratified by union members, would avert a strike that had been threatened by the union.</p><p>The agreement also includes other provisions, such as smaller class sizes and more support staff.</p><p>The deal is a major victory for the teachers union, which has been fighting for a raise for years. It is also a victory for Mayor Adams, who was able to avoid a strike that would have disrupted the city's schools.</p>",
+    tags: [
+      {
+        label: "Education"
+      },
+      {
+        label: "Labor"
       }
     ]
   }
