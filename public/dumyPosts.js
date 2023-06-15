@@ -318,7 +318,28 @@ export const dummyPosts = [
         label: "Labor"
       }
     ]
+  },
+  {
+    "id": 15,
+    "title": "Denver shooting leaves 10 dead",
+    "description": "A gunman opened fire at a grocery store in Denver, Colorado, on Monday, killing 10 people and wounding several others. The gunman was later killed by police. The shooting has reignited the debate about gun control in the United States.",
+    "date": "2023-06-13",
+    "slug": "denver-shooting-leaves-10-dead",
+    "images": [ 
+      {
+        "id": 1,
+        "url": "https://media.cnn.com/api/v1/images/stellar/prod/230613081548-01-denver-shooting-market-street-061323.jpg?c=16x9&q=h_720,w_1280,c_fill/f_webp",
+        "name": "Denver, Colorado"
+      }
+    ],
+    "content": "<h2>Denver shooting leaves 10 dead</h2>\n<p>A gunman opened fire at a grocery store in Denver, Colorado, on Monday, killing 10 people and wounding several others. The gunman was later killed by police. The shooting has reignited the debate about gun control in the United States.</p>\n<p>The shooting took place at the King Soopers grocery store in the Highlands Ranch neighborhood of Denver. The gunman entered the store around 3:00 p.m. local time and opened fire. He was later killed by police after a standoff.</p>\n<p>The victims of the shooting have not been identified. However, police said that they included both customers and employees of the grocery store.</p>\n<p>The shooting has reignited the debate about gun control in the United States. Gun control advocates have called for stricter gun laws in the wake of the shooting. However, gun rights advocates have said that the shooting was a tragedy, but that it does not justify stricter gun laws.</p>",
+    "tags": [
+      {
+        "label": "Crime"
+      }
+    ]
   }
+  
   
   
 ];
