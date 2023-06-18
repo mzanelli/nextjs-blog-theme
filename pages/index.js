@@ -5,7 +5,6 @@ import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import ImageGallery from '../components/ImageGallery';
-import { dummyPosts } from "../public/dumyPosts";
 import TagsComponent from '../components/TagComponent';
 import { useRouter } from 'next/router';
 import {fetchData} from '../api/Posts'
@@ -128,7 +127,6 @@ export default function Index({ globalData,post2 }) {
 
 export async function getStaticProps(context) {
   const globalData = getGlobalData();
-  const posts = dummyPosts;
   let post2 = null;
   try {
     const data = await fetchData();

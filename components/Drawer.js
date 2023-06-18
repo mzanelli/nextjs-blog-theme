@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { dummyPosts } from "../public/dumyPosts";
 import { useRouter } from 'next/router';
+import {fetchData} from '../api/Posts'
 
 const Drawer = ({ close }) => {
-  const getAllTags = () => {
+  const  getAllTags = async () => {
     const tagsSet = new Set();
-
-    dummyPosts.forEach((post) => {
+    let post2 = null;
+    try {
+      const data = await fetchData();
+      post2 = data;
+    } catch (error) {
+      console.error(error);
+    }
+    post2.forEach((post) => {
       post.tags.forEach((tag) => {
         tagsSet.add(tag.label);
       });
@@ -20,7 +26,7 @@ const Drawer = ({ close }) => {
     return tagsArray;
   };
 
-  const tags = getAllTags(dummyPosts);
+  const tags = getAllTags();
   const router = useRouter();
 
   const handleClose = () => {

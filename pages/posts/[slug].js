@@ -7,7 +7,6 @@ import Footer from '../../components/Footer';
 import HeaderWeb from '../../components/HeaderWeb';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
-import { dummyPosts } from '../../public/dumyPosts';
 import ImageGallery from '../../components/ImageGallery';
 import { useRouter } from 'next/router';
 import TagsComponent from '../../components/TagComponent';
@@ -58,7 +57,7 @@ export default function PostPage({
         <ImageGallery images={post.fields.images}></ImageGallery>
         <main>
         {post.fields.content.content.map((item, index) => (
-          <div key={index} dangerouslySetInnerHTML={{ __html: item.content[0].value }} />
+          <div key={index} dangerouslySetInnerHTML={{ __html: item.content[0]?.value }} />
         ))}
         </main>
         <TagsComponent tags={post.fields.tags} handleTagClick={handleTagClick} />
@@ -106,8 +105,16 @@ export default function PostPage({
 }
 
 export async function getStaticPaths() {
-  const paths = dummyPosts.map((post) => ({
-    params: { slug: post.slug },
+
+  let post2 = null;
+  try {
+    const data = await fetchData();
+    post2 = data;
+  } catch (error) {
+    console.error(error);
+  }
+  const paths = post2.map((post) => ({
+    params: { slug: post.fields.slug },
   }));
 
   return {
