@@ -11,6 +11,8 @@ import { dummyPosts } from '../../public/dumyPosts';
 import ImageGallery from '../../components/ImageGallery';
 import { useRouter } from 'next/router';
 import TagsComponent from '../../components/TagComponent';
+import {fetchData} from '../../api/Posts'
+
 const components = {
   a: CustomLink,
   Head,
@@ -30,54 +32,58 @@ export default function PostPage({
     router.push(`/?${queryParams}`);
   };
 
+  console.log(post.fields.content)
+
+ 
+
+
   return (
     <div>
       <HeaderWeb name={globalData.name} />
       <Layout>
       <SEO
-        title={`${post.title} - ${globalData.name}`}
-        description={post.description}
+        title={`${post.fields.entryTitle} - ${globalData.name}`}
+        description={post.fields.description.content[0].content[0].value}
       />
       
       <article className="px-6 md:px-0">
         <header>
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-8 mt-4 opacity-60">
-            {post.title}
+            {post.fields.entryTitle}
           </h1>
-          {post.description && (
-            <p className="text-xl mb-8 opacity-60">{post.description}</p>
-          )}
+         
+            <p className="text-xl mb-8 opacity-60">{post.fields.description.content[0].content[0].value}</p>
+        
         </header>
-        <ImageGallery images={post.images}></ImageGallery>
+        <ImageGallery images={post.fields.images}></ImageGallery>
         <main>
-          <article
-            className="main-text mt-8 mb-8"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+        {post.fields.content.content.map((item, index) => (
+          <div key={index} dangerouslySetInnerHTML={{ __html: item.content[0].value }} />
+        ))}
         </main>
-        <TagsComponent tags={post.tags} handleTagClick={handleTagClick} />
+        <TagsComponent tags={post.fields.tags} handleTagClick={handleTagClick} />
         <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
           {showPrevPostButton && (
-            <Link href={`/posts/${prevPost.slug}`}>
+            <Link href={`/posts/${prevPost.fields?.slug}`}>
               <a className="py-8 px-10 text-center md:text-right first:rounded-t-lg md:first:rounded-tr-none md:first:rounded-l-lg last:rounded-r-lg first last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 last:border-t md:border-r-0 md:last:border-r md:last:rounded-r-none flex flex-col">
                 <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
                   Previous
                 </p>
                 <h4 className="text-2xl text-gray-700 mb-6 dark:text-white opacity-60">
-                  {prevPost.title}
+                  {prevPost.fields.entryTitle}
                 </h4>
                 <ArrowIcon right={false} className="transform rotate-180 mx-auto md:mr-0 mt-auto" />
               </a>
             </Link>
           )}
           {showNextPostButton && (
-            <Link href={`/posts/${nextPost.slug}`}>
+            <Link href={`/posts/${nextPost.fields?.slug}`}>
               <a className="py-8 px-10 text-center md:text-left md:first:rounded-t-lg last:rounded-b-lg first:rounded-l-lg md:last:rounded-bl-none md:last:rounded-r-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-t-0 first:border-t first:rounded-t-lg md:border-t border-b-0 last:border-b flex flex-col">
                 <p className="uppercase text-gray-500 mb-4 dark:text-white dark:opacity-60">
                   Next
                 </p>
                 <h4 className="text-2xl text-gray-700 mb-6 dark:text-white opacity-60">
-                  {nextPost.title}
+                {nextPost.fields.entryTitle}
                 </h4>
                 <ArrowIcon right={true} className="mt-auto mx-auto md:ml-0" />
               </a>
@@ -110,38 +116,48 @@ export async function getStaticPaths() {
   };
 }
 
-function getPreviousPost(currentSlug) {
-  const currentIndex = dummyPosts.findIndex(
-    (post) => post.slug === currentSlug
+function getPreviousPost(currentSlug,posts) {
+  const currentIndex = posts.findIndex(
+    (post) => post.fields.slug === currentSlug
   );
   if (currentIndex === -1 || currentIndex === 0) {
     return null;
   }
-  return dummyPosts[currentIndex - 1];
+  return posts[currentIndex - 1];
 }
 
-function getNextPost(currentSlug) {
-  const currentIndex = dummyPosts.findIndex(
-    (post) => post.slug === currentSlug
+function getNextPost(currentSlug,posts) {
+  const currentIndex = posts.findIndex(
+    (post) => post.fields.slug === currentSlug
   );
-  if (currentIndex === -1 || currentIndex === dummyPosts.length - 1) {
+
+  if (currentIndex === -1 || currentIndex === posts.length - 1) {
     return null;
   }
-  return dummyPosts[currentIndex + 1];
+  let value = posts[currentIndex + 1];
+  return value;
 }
 
 export async function getStaticProps({ params }) {
-  const post = dummyPosts.find((post) => post.slug === params.slug);
+  let post2 = null;
+  try {
+    const data = await fetchData();
+    post2 = data; 
+  } catch (error) {
+    console.error(error);
+  }
 
-  const prevPost = getPreviousPost(params.slug);
-  const nextPost = getNextPost(params.slug);
+  let postSlug = post2.find((post) => post.fields.slug === params.slug);
+
+  const prevPost = getPreviousPost(params.slug,post2);
+  const nextPost = getNextPost(params.slug,post2);
 
   const globalData = await getGlobalData();
 
   return {
     props: {
       globalData,
-      post: post,
+      post: postSlug,
       prevPost,
       nextPost,
     },
