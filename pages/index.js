@@ -33,10 +33,11 @@ export default function Index({ globalData,post2 }) {
   }
 
   const filterPostsByTag = (tag) => {
+    console.log("filter",tag)
     if (tag) {
       let filter = [];
       for (const post of post2) {
-        for (const aTag of post.tags){
+        for (const aTag of post.fields.tags){
             if(aTag.label === tag.label){
               filter.push(post)
             }
