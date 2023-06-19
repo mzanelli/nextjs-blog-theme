@@ -31,11 +31,6 @@ export default function PostPage({
     router.push(`/?${queryParams}`);
   };
 
-  console.log(post.fields.content)
-
- 
-
-
   return (
     <div>
       <HeaderWeb name={globalData.name} />

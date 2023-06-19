@@ -35,7 +35,6 @@ const Drawer = ({ close }) => {
   };
 
   const handleTagClick = (tag) => {
-    console.log(tag);
     const queryParams = new URLSearchParams({ tag: tag }).toString();
     router.push(`/?${queryParams}`);
     close();

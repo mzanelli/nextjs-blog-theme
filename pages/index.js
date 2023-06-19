@@ -33,7 +33,6 @@ export default function Index({ globalData,post2 }) {
   }
 
   const filterPostsByTag = (tag) => {
-    console.log("filter",tag)
     if (tag) {
       let filter = [];
       for (const post of post2) {

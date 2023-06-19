@@ -35,12 +35,10 @@ const HeaderWeb = ({ name, tags }) => {
   }, []);
 
     const openModal = () => {
-      console.log("open")
       setIsOpen(true);
     };
 
     const closeModal = () => {
-      console.log("close")
       setIsOpen(false);
     };
 

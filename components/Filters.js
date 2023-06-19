@@ -6,7 +6,6 @@ const Filters = ({ selectedTag, handleTagRemove }) => {
   if (!selectedTag) {
     return null; 
   }
-  console.log(selectedTag)
   return (
     <div className="filters-container">
         <span style={{color:"#000", marginLeft:"24px",opacity:"0.6"}}>Filters: </span>
