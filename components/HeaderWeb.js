@@ -5,11 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faBars } from '@fortawesome/free-solid-svg-icons';
 import Drawer from './Drawer';
 import Modal from 'react-modal';
+import { useRouter } from 'next/router';
+
 
 Modal.setAppElement('#root'); // Configura el elemento raíz de tu aplicación
 const HeaderWeb = ({ name, tags }) => {
 
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const googleAnalyticsScript = document.createElement('script');
@@ -42,6 +45,11 @@ const HeaderWeb = ({ name, tags }) => {
       setIsOpen(false);
     };
 
+    const handleOnClick = () => {
+       console.log("click");
+       router.push({ pathname: '/', query: { tag: "All" } });
+    }
+
   return (
     <>
       <Modal
@@ -53,14 +61,12 @@ const HeaderWeb = ({ name, tags }) => {
         <Drawer close={closeModal}/>
       </Modal>
       <header className="navi-bar navi-container">
-              <Link href="/">
-              <a>
+             <a href="#" onClick={() => handleOnClick()}>
                   <div className='navi-logo'> 
                     <SVGLogoWeb />
                     <div className='navi-cia'>{name}</div>
                   </div>
               </a>
-              </Link>  
               <div className="hamburger-container">
                   <FontAwesomeIcon onClick={openModal} className="hamburger" icon={faBars} />
               </div>

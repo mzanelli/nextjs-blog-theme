@@ -8,32 +8,26 @@ import ImageGallery from '../components/ImageGallery';
 import TagsComponent from '../components/TagComponent';
 import { useRouter } from 'next/router';
 import {fetchData} from '../api/Posts'
-
 import { useState,useEffect } from 'react';
 import HeaderWeb from '../components/HeaderWeb';
 
 export default function Index({ globalData,post2 }) {
 
   const [clientPosts2, setClientPosts2] = useState(post2);
-
-  const [selectedTag, setSelectedTag] = useState(null);
   const router = useRouter();
-
   const { query } = router;
 
   const handleTagClick = (tag) => {
+    console.log("filter tag: " + tag)
     let filterdPosts = filterPostsByTag(tag);
     setClientPosts2(filterdPosts);
-    setSelectedTag(tag);
   };
 
-  const handleTagRemove = () => {
-    setSelectedTag(null);
-    setClientPosts2(post2)
-  }
-
   const filterPostsByTag = (tag) => {
+    console.log("filter 1")
     if (tag) {
+          console.log("filter 2")
+
       let filter = [];
       for (const post of post2) {
         for (const aTag of post.fields.tags){
@@ -48,27 +42,24 @@ export default function Index({ globalData,post2 }) {
 
   useEffect(() => {
     let filterdPost = null;
-    if (query.tag) {
-
+    console.log("efect 1")
+    if (query.tag !== "All") {
       let requestTag = {
         label:query.tag
       }
-
-      setSelectedTag(requestTag);
+      console.log("efect 2 ", query.tag)
 
       filterdPost = filterPostsByTag(requestTag);
       setClientPosts2(filterdPost)
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query?.tag,query]);
-
-  useEffect(() => {
+    }else{
       fetchData().then(data => {
-         
+        setClientPosts2(data)
       }).catch(error => {
         console.error(error);
       });
-  }, []); 
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query?.tag,query]);
 
 
   return (
@@ -109,8 +100,6 @@ export default function Index({ globalData,post2 }) {
           ))}
         </ul>
       </main>
-     
-      
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
         variant="large"
