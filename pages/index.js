@@ -11,9 +11,9 @@ import {fetchData} from '../api/Posts'
 import { useState,useEffect } from 'react';
 import HeaderWeb from '../components/HeaderWeb';
 
-export default function Index({ globalData,post2 }) {
+export default function Index({ globalData,data }) {
 
-  const [clientPosts2, setClientPosts2] = useState(post2);
+  const [clientPosts2, setClientPosts2] = useState(data);
   const [selectedTag, setSelectedTag] = useState("")
   const router = useRouter();
   const { query } = router;
@@ -86,7 +86,11 @@ export default function Index({ globalData,post2 }) {
               key={post.fields.slug}
               className="md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0"
             >
-             <ImageGallery images={post.fields.images}></ImageGallery>
+
+            {post.fields.images.myArrayList ? 
+            ( <ImageGallery images={post.fields.images.myArrayList}></ImageGallery>) 
+            :( <ImageGallery images={post.fields.images}></ImageGallery>)}
+
               <Link
                 as={`/posts/${post.fields.slug}`}
                 href={`/posts/[slug]`}
@@ -106,7 +110,10 @@ export default function Index({ globalData,post2 }) {
                   <ArrowIcon right={true} className="mt-4" />
                 </a>
               </Link>
-              <TagsComponent selectedTag={selectedTag} handleTagClick={handleTagClick} tags={post.fields.tags} />
+              {post.fields.tags.myArrayList ? 
+              (<TagsComponent selectedTag={selectedTag} handleTagClick={handleTagClick} tags={post.fields.tags.myArrayList} />) :
+              (<TagsComponent selectedTag={selectedTag} handleTagClick={handleTagClick} tags={post.fields.tags} />)}
+              
 
             </li>
           ))}
@@ -127,14 +134,26 @@ export default function Index({ globalData,post2 }) {
 }
 
 export async function getStaticProps(context) {
-  const globalData = getGlobalData();
-  let post2 = null;
-  try {
-    const data = await fetchData();
-    post2 = data;
-  } catch (error) {
-    console.error(error);
+  const globalData = getGlobalData(); 
+  const data = await fetchData();  
+  for (const post of data) { 
+   // for(const image of post.fields.images){  
+   //   console.log(image)  
+   // }
+   if(post.fields.images.myArrayList){
+    let images = post.fields.images.myArrayList; 
+    for( const image of images){ 
+      console.log("new",image.map.name)  
+      console.log("new",image.map.url) 
+
+    }
+
+   }else{
+    console.log(post.fields.images)     
+
+   }
+
   }
-  return { props: { globalData, post2 } };
+  return { props: { globalData, data } }; 
 }
 

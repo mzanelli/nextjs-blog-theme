@@ -49,7 +49,10 @@ export default function PostPage({
             <p className="text-xl mb-8 opacity-60">{post.fields.description.content[0].content[0].value}</p>
         
         </header>
-        <ImageGallery images={post.fields.images}></ImageGallery>
+        {post.fields.images.myArrayList ? 
+            ( <ImageGallery images={post.fields.images.myArrayList}></ImageGallery>) 
+            :( <ImageGallery images={post.fields.images}></ImageGallery>)}
+
         <main>
         {post.fields.content.content.map((item, index) => (
           <div key={index} dangerouslySetInnerHTML={{ __html: item.content[0]?.value }} />
