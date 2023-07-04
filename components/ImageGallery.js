@@ -23,13 +23,13 @@ const ImageGallery = ({ images }) => {
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
         )}
-        <img
-          src={images[currentImageIndex].url}
-          alt={images[currentImageIndex].name}
-          width="100%"
-          height="100%"
-          className='rounded-image'
-        />
+        <div className="image-wrapper">            <img
+              src={images[currentImageIndex].url}
+              alt={images[currentImageIndex].name}
+              width="320px"
+              className='rounded-image'
+            />
+        </div>
         {showButtons && (
           <button className="image-button right-button" onClick={nextImage}>
             <FontAwesomeIcon icon={faChevronRight} />

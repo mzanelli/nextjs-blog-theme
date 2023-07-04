@@ -55,7 +55,7 @@ export default function PostPage({
           <div key={index} dangerouslySetInnerHTML={{ __html: item.content[0]?.value }} />
         ))}
         </main>
-        <TagsComponent tags={post.fields.tags} handleTagClick={handleTagClick} />
+        
         <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
           {showPrevPostButton && (
             <Link href={`/posts/${prevPost.fields?.slug}`}>

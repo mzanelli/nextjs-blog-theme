@@ -14,20 +14,16 @@ import HeaderWeb from '../components/HeaderWeb';
 export default function Index({ globalData,post2 }) {
 
   const [clientPosts2, setClientPosts2] = useState(post2);
+  const [selectedTag, setSelectedTag] = useState("")
   const router = useRouter();
   const { query } = router;
 
   const handleTagClick = (tag) => {
-    console.log("filter tag: " + tag)
-    let filterdPosts = filterPostsByTag(tag);
-    setClientPosts2(filterdPosts);
+    setSelectedTag(tag)
   };
 
   const filterPostsByTag = (tag) => {
-    console.log("filter 1")
     if (tag) {
-          console.log("filter 2")
-
       let filter = [];
       for (const post of post2) {
         for (const aTag of post.fields.tags){
@@ -40,27 +36,43 @@ export default function Index({ globalData,post2 }) {
     }
   };
 
-  useEffect(() => {
-    let filterdPost = null;
-    console.log("efect 1")
-    if (query.tag !== "All") {
-      let requestTag = {
-        label:query.tag
-      }
-      console.log("efect 2 ", query.tag)
 
-      filterdPost = filterPostsByTag(requestTag);
-      setClientPosts2(filterdPost)
+  useEffect(() => {
+    console.log("filter executed selected tag: " + selectedTag);
+    if(selectedTag){
+          console.log("filtro",selectedTag)
+          const filteredPosts = filterPostsByTag(selectedTag);
+          setClientPosts2(filteredPosts);
     }else{
-      fetchData().then(data => {
+      fetchData().then((data) => {
+        console.log(data);
         setClientPosts2(data)
-      }).catch(error => {
+      }).catch((error) => {
         console.error(error);
       });
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query?.tag,query]);
+      
 
+    }
+  }, [selectedTag]);
+  
+
+  useEffect(() => {
+    console.log("query",query.tag)
+
+    let tag  = {
+      "label" : query.tag
+    }
+
+    if(query?.tag){
+        console.log("filter ?")
+        setSelectedTag(tag)
+    }else{
+      setSelectedTag(null)
+    }
+
+  }, [query]);
+  
+  
 
   return (
    <div >
@@ -82,8 +94,8 @@ export default function Index({ globalData,post2 }) {
                 <a className="py-2 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
                   {post.fields.entryTitle && <h2 className="text-2xl md:text-3xl mt-2 ">{post.fields.entryTitle}</h2>}
                   {post.fields.dateCreated && (
-                    <p style={{fontSize:"13px"}} className='opacity-20'>
-                      {post.fields.dateCreated}
+                    <p style={{ fontSize: "13px" }} className="opacity-20">
+                      {new Date(post.fields.dateCreated).toLocaleDateString()}
                     </p>
                   )}
                   {post.fields.description.content && (
@@ -94,7 +106,7 @@ export default function Index({ globalData,post2 }) {
                   <ArrowIcon right={true} className="mt-4" />
                 </a>
               </Link>
-              <TagsComponent handleTagClick={handleTagClick} tags={post.fields.tags} />
+              <TagsComponent selectedTag={selectedTag} handleTagClick={handleTagClick} tags={post.fields.tags} />
 
             </li>
           ))}
