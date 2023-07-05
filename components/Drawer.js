@@ -16,8 +16,8 @@ const Drawer = ({ close }) => {
       const data = await fetchData();
       const tagsSet = new Set();
       data.forEach((post) => {
-        post.fields.tags.forEach((tag) => {
-          tagsSet.add(tag.label);
+        post.fields.tags.myArrayList.forEach((tag) => {
+          tagsSet.add(tag.map.label);
         });
       });
 

@@ -6,12 +6,14 @@ const TagsComponent = ({ tags, handleTagClick,selectedTag }) => {
   return (
     <div className="tags-container">
       {tags.map((tag, index) => (
-        <div
+        <>
+         <div
           key={index}
-          className={`tag ${selectedTag?.label === tag.label ? 'selected' : ''}`}
+          className={`tag ${selectedTag?.map?.label === tag.map.label ? 'selected' : ''}`}
           onClick={() => handleClick(tag)}>
-          {tag.label}
+          {tag.map.label}
         </div>
+        </>
       ))}
     </div>
   );

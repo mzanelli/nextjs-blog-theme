@@ -25,9 +25,9 @@ export default function Index({ globalData,data }) {
   const filterPostsByTag = (tag) => {
     if (tag) {
       let filter = [];
-      for (const post of post2) {
-        for (const aTag of post.fields.tags){
-            if(aTag.label === tag.label){
+      for (const post of clientPosts2) {
+        for (const aTag of post.fields.tags.myArrayList){
+            if(aTag.map.label === tag.map.label){
               filter.push(post)
             }
         }
@@ -110,10 +110,8 @@ export default function Index({ globalData,data }) {
                   <ArrowIcon right={true} className="mt-4" />
                 </a>
               </Link>
-              {post.fields.tags.myArrayList ? 
-              (<TagsComponent selectedTag={selectedTag} handleTagClick={handleTagClick} tags={post.fields.tags.myArrayList} />) :
-              (<TagsComponent selectedTag={selectedTag} handleTagClick={handleTagClick} tags={post.fields.tags} />)}
-              
+             
+              <TagsComponent selectedTag={selectedTag} handleTagClick={handleTagClick} tags={post.fields.tags.myArrayList} />             
 
             </li>
           ))}
@@ -136,24 +134,6 @@ export default function Index({ globalData,data }) {
 export async function getStaticProps(context) {
   const globalData = getGlobalData(); 
   const data = await fetchData();  
-  for (const post of data) { 
-   // for(const image of post.fields.images){  
-   //   console.log(image)  
-   // }
-   if(post.fields.images.myArrayList){
-    let images = post.fields.images.myArrayList; 
-    for( const image of images){ 
-      console.log("new",image.map.name)  
-      console.log("new",image.map.url) 
-
-    }
-
-   }else{
-    console.log(post.fields.images)     
-
-   }
-
-  }
-  return { props: { globalData, data } }; 
+    return { props: { globalData, data } }; 
 }
 
