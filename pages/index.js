@@ -23,9 +23,10 @@ export default function Index({ globalData,data }) {
   };
 
   const filterPostsByTag = (tag) => {
+    console.log("tag: ",tag);
     if (tag) {
       let filter = [];
-      for (const post of clientPosts2) {
+      for (const post of data) {
         for (const aTag of post.fields.tags.myArrayList){
             if(aTag.map.label === tag.map.label){
               filter.push(post)
@@ -36,16 +37,12 @@ export default function Index({ globalData,data }) {
     }
   };
 
-
   useEffect(() => {
-    console.log("filter executed selected tag: " + selectedTag);
     if(selectedTag){
-          console.log("filtro",selectedTag)
           const filteredPosts = filterPostsByTag(selectedTag);
           setClientPosts2(filteredPosts);
     }else{
       fetchData().then((data) => {
-        console.log(data);
         setClientPosts2(data)
       }).catch((error) => {
         console.error(error);
@@ -57,14 +54,11 @@ export default function Index({ globalData,data }) {
   
 
   useEffect(() => {
-    console.log("query",query.tag)
-
     let tag  = {
       "label" : query.tag
     }
 
     if(query?.tag){
-        console.log("filter ?")
         setSelectedTag(tag)
     }else{
       setSelectedTag(null)
@@ -76,7 +70,7 @@ export default function Index({ globalData,data }) {
 
   return (
    <div >
-     <HeaderWeb name={globalData.name} />    
+     <HeaderWeb handleTagClick={handleTagClick} name={globalData.name} />    
    <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <main className="w-full">
@@ -133,7 +127,7 @@ export default function Index({ globalData,data }) {
 
 export async function getStaticProps(context) {
   const globalData = getGlobalData(); 
-  const data = await fetchData();  
-    return { props: { globalData, data } }; 
+  const data = await fetchData(); 
+  return { props: { globalData, data } }; 
 }
 

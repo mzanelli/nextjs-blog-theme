@@ -4,7 +4,7 @@ import { faClose, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/router';
 import { fetchData } from '../api/Posts';
 
-const Drawer = ({ close }) => {
+const Drawer = ({ close ,handleTagClick }) => {
   const [tags, setTags] = useState([]);
 
   useEffect(() => {
@@ -34,9 +34,17 @@ const Drawer = ({ close }) => {
     close();
   };
 
-  const handleTagClick = (tag) => {
-    const queryParams = new URLSearchParams({ tag: tag }).toString();
-    router.push(`/?${queryParams}`);
+  const handleTagClickDrawer = (tag) => {
+    let aTag = {
+      map: {
+          label : tag
+      }
+    }
+
+
+    handleTagClick(aTag);
+    //const queryParams = new URLSearchParams({ tag: tag }).toString();
+    //router.push(`/?${queryParams}`);
     close();
   };
 
@@ -53,7 +61,7 @@ const Drawer = ({ close }) => {
               <li key={index} className="drawer-item">
                 <span
                   style={{ cursor: 'pointer' }}
-                  onClick={() => handleTagClick(tag)}
+                  onClick={() => handleTagClickDrawer(tag)}
                 >
                   {tag}
                   <FontAwesomeIcon className="right-arrow" icon={faArrowRight} />
@@ -68,7 +76,7 @@ const Drawer = ({ close }) => {
               <li key={index} className="drawer-item">
                 <span
                   style={{ cursor: 'pointer' }}
-                  onClick={() => handleTagClick(tag)}
+                  onClick={() => handleTagClickDrawer(tag)}
                 >
                   {tag}
                   <FontAwesomeIcon className="right-arrow" icon={faArrowRight} />

@@ -45,9 +45,12 @@ export default function PostPage({
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-8 mt-4 opacity-60">
             {post.fields.entryTitle}
           </h1>
-         
-            <p className="text-xl mb-8 opacity-60">{post.fields.description.content[0].content[0].value}</p>
-        
+            <p className="text-xl  opacity-60">{post.fields.description.content[0].content[0].value}</p>
+            {post.fields.dateCreated && (
+                    <p style={{ fontSize: "13px" }} className="opacity-20">
+                      {new Date(post.fields.dateCreated).toLocaleDateString()}
+                    </p>
+                  )}
         </header>
         {post.fields.images.myArrayList ? 
             ( <ImageGallery images={post.fields.images.myArrayList}></ImageGallery>) 

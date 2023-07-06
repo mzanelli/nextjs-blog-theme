@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 
 Modal.setAppElement('#root'); // Configura el elemento raíz de tu aplicación
-const HeaderWeb = ({ name, tags }) => {
+const HeaderWeb = ({ name, tags ,handleTagClick }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -59,7 +59,7 @@ const HeaderWeb = ({ name, tags }) => {
        className="Modal"
        overlayClassName="Overlay"
        >
-        <Drawer close={closeModal}/>
+      <Drawer handleTagClick={handleTagClick} close={closeModal}/>
       </Modal>
       <header className="navi-bar navi-container">
              <a href="#" onClick={() => handleOnClick()}>
