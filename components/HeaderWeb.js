@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 
 Modal.setAppElement('#root'); // Configura el elemento raíz de tu aplicación
-const HeaderWeb = ({ name, tags ,handleTagClick }) => {
+const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -50,7 +50,7 @@ const HeaderWeb = ({ name, tags ,handleTagClick }) => {
        //router.push({ pathname: '/', query: { tag: "All" } });
        router.push({ pathname: '/'});
     }
-
+    console.log("page",pageType)
   return (
     <>
       <Modal
@@ -59,7 +59,8 @@ const HeaderWeb = ({ name, tags ,handleTagClick }) => {
        className="Modal"
        overlayClassName="Overlay"
        >
-      <Drawer handleTagClick={handleTagClick} close={closeModal}/>
+      {pageType !== "post" ? ( <Drawer handleTagClick={handleTagClick} close={closeModal}/>):(null)}
+     
       </Modal>
       <header className="navi-bar navi-container">
              <a href="#" onClick={() => handleOnClick()}>
@@ -68,9 +69,10 @@ const HeaderWeb = ({ name, tags ,handleTagClick }) => {
                     <div className='navi-cia'>{name}</div>
                   </div>
               </a>
-              <div className="hamburger-container">
+              {pageType==="post" ? (null):  ( <div className="hamburger-container">
                   <FontAwesomeIcon onClick={openModal} className="hamburger" icon={faBars} />
-              </div>
+              </div>)}
+             
       </header>
     </>
   );

@@ -33,7 +33,7 @@ export default function PostPage({
 
   return (
     <div>
-      <HeaderWeb name={globalData.name} />
+      <HeaderWeb pageType = "post" name={globalData.name} />
       <Layout>
       <SEO
         title={`${post.fields.entryTitle} - ${globalData.name}`}

@@ -48,7 +48,6 @@ export default function Index({ globalData,data }) {
         console.error(error);
       });
       
-
     }
   }, [selectedTag]);
   
@@ -66,11 +65,9 @@ export default function Index({ globalData,data }) {
 
   }, [query]);
   
-  
-
   return (
    <div >
-     <HeaderWeb handleTagClick={handleTagClick} name={globalData.name} />    
+     <HeaderWeb pageType={"index"} handleTagClick={handleTagClick} name={globalData.name} />    
    <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <main className="w-full">
