@@ -36,14 +36,14 @@ export default function PostPage({
       <HeaderWeb pageType = "post" name={globalData.name} />
       <Layout>
       <SEO
-        title={`${post.fields.entryTitle} - ${globalData.name}`}
-        description={post.fields.description.content[0].content[0].value}
+        title={`${post.fields.entryTitle.slice(0, 140)} - ${globalData.name}`}
+        description={post.fields.description.content[0].content[0].value.slice(0, 140)}
       />
       
       <article className="px-6 md:px-0">
         <header>
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-8 mt-4 opacity-60">
-            {post.fields.entryTitle}
+          {post.fields.entryTitle.slice(0, 140)}
           </h1>
             <p className="text-xl  opacity-60">{post.fields.description.content[0].content[0].value}</p>
             {post.fields.dateCreated && (

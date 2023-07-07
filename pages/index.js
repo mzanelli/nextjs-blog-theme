@@ -87,7 +87,8 @@ export default function Index({ globalData,data }) {
                 href={`/posts/[slug]`}
               >
                 <a className="py-2 lg:py-10 px-6 lg:px-16 block focus:outline-none focus:ring-4">
-                  {post.fields.entryTitle && <h2 className="text-2xl md:text-3xl mt-2 ">{post.fields.entryTitle}</h2>}
+                {post.fields.entryTitle && <h2 className="text-2xl md:text-3xl mt-2 ">
+                  {post.fields.entryTitle.slice(0, 140)}</h2>}                  
                   {post.fields.dateCreated && (
                     <p style={{ fontSize: "13px" }} className="opacity-20">
                       {new Date(post.fields.dateCreated).toLocaleDateString()}
