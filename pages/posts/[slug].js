@@ -27,9 +27,11 @@ export default function PostPage({
   const showNextPostButton = nextPost !== null;
   const router = useRouter();
   const handleTagClick = (tag) => {
-    console.log("tag",tag.map.label)
-    const queryParams = new URLSearchParams({ tag: tag.map.label }).toString();
-    router.push(`/?${queryParams}`);
+    if(tag){
+        console.log("tag",tag.map.label)
+        const queryParams = new URLSearchParams({ tag: tag.map.label }).toString();
+        router.push(`/?${queryParams}`);
+    }
   };
 
   return (
