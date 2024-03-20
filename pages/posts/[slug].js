@@ -27,13 +27,14 @@ export default function PostPage({
   const showNextPostButton = nextPost !== null;
   const router = useRouter();
   const handleTagClick = (tag) => {
-    const queryParams = new URLSearchParams({ tag: tag.label }).toString();
+    console.log("tag",tag.map.label)
+    const queryParams = new URLSearchParams({ tag: tag.map.label }).toString();
     router.push(`/?${queryParams}`);
   };
 
   return (
     <div>
-      <HeaderWeb pageType = "post" name={globalData.name} />
+      <HeaderWeb handleTagClick={handleTagClick} pageType = "post" name={globalData.name} />
       <Layout>
       <SEO
         title={`${post.fields.entryTitle.slice(0, 140)} - ${globalData.name}`}

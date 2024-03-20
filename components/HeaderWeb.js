@@ -8,7 +8,7 @@ import Modal from 'react-modal';
 import { useRouter } from 'next/router';
 
 
-Modal.setAppElement('#root'); // Configura el elemento raíz de tu aplicación
+Modal.setAppElement('#root'); 
 const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
 
   const [isOpen, setIsOpen] = useState(false);
@@ -59,8 +59,7 @@ const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
        className="Modal"
        overlayClassName="Overlay"
        >
-      {pageType !== "post" ? ( <Drawer handleTagClick={handleTagClick} close={closeModal}/>):(null)}
-     
+      <Drawer handleTagClick={handleTagClick} close={closeModal}/>
       </Modal>
       <header className="navi-bar navi-container">
              <a href="#" onClick={() => handleOnClick()}>
@@ -69,7 +68,7 @@ const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
                     <div className='navi-cia'>{name}</div>
                   </div>
               </a>
-              {pageType==="post" ? (null):  ( <div className="hamburger-container">
+              {( <div className="hamburger-container">
                   <FontAwesomeIcon onClick={openModal} className="hamburger" icon={faBars} />
               </div>)}
              

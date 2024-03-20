@@ -38,10 +38,14 @@ export default function Index({ globalData,data }) {
   };
 
   useEffect(() => {
+    console.log("test post")
     if(selectedTag){
+          console.log("selected tag");
           const filteredPosts = filterPostsByTag(selectedTag);
+          console.log("filtered post",filteredPosts)
           setClientPosts2(filteredPosts);
     }else{
+        console.log("not selected tag")
       fetchData().then((data) => {
         setClientPosts2(data)
       }).catch((error) => {
