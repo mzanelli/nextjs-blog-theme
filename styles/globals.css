@@ -184,12 +184,14 @@ body {
 .Modal {
   position: absolute;
   top: 60px;
+  width: 320px;
   right: 5px;
   background-color: #cbd5eb;
-  width: 200px;
   border-color: #fff;
   transition: transform 0.3s ease-in-out;
 }
+
+
 
 
 
@@ -214,8 +216,8 @@ body {
   margin:8px;
 }
 .tag-title{
-  padding-left:24px;
-  padding-top:18px;
+  padding-left:28px;
+  padding-top:8px;
   font-weight: bold;
 }
 
@@ -229,20 +231,20 @@ body {
 
 .drawer{
 }
+.drawer-cont{
+  display: flex;
+
+}
 
 .drawer-menu{
   padding-bottom: 8px;
 }
 
 .drawer-item{
-  margin:8px;
-  height: 25px;
   font-size: 16px;
   font-weight: 400;
-  margin-left: 25px;
-  display:flex;
-  justify-content: space-between;
-  margin-right: 25px;
+  margin-left: 30px;
+
 
 }
 

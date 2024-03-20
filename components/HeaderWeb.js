@@ -54,13 +54,12 @@ const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
   return (
     <>
       <Modal
-       
        isOpen={isOpen} 
        onRequestClose={closeModal} 
-       className="Modal"
+       className="Modal" 
        overlayClassName="Overlay"
        >
-      <Drawer handleTagClick={handleTagClick} close={closeModal}/>
+         <Drawer handleTagClick={handleTagClick} close={closeModal}/>
       </Modal>
       <header className="navi-bar navi-container">
              <a href="#" onClick={() => handleOnClick()}>
