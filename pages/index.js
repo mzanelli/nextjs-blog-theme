@@ -13,17 +13,16 @@ import HeaderWeb from '../components/HeaderWeb';
 
 export default function Index({ globalData,data }) {
 
-  const [clientPosts2, setClientPosts2] = useState(data);
+  const [posts, setPosts] = useState(data);
   const [selectedTag, setSelectedTag] = useState("")
-  const router = useRouter();
+const router = useRouter();
   const { query } = router;
 
   const handleTagClick = (tag) => {
-    setSelectedTag(tag)
+    setSelectedTag(tag);
   };
 
   const filterPostsByTag = (tag) => {
-    console.log("tag: ",tag);
     if (tag) {
       let filter = [];
       for (const post of data) {
@@ -37,29 +36,23 @@ export default function Index({ globalData,data }) {
     }
   };
 
-  useEffect(() => {
-    console.log("test post")
+useEffect(() => {
     if(selectedTag){
-          console.log("selected tag");
           const filteredPosts = filterPostsByTag(selectedTag);
-          console.log("filtered post",filteredPosts)
-          setClientPosts2(filteredPosts);
+          setPosts(filteredPosts);
     }else{
-        console.log("not selected tag")
-      fetchData().then((data) => {
-        setClientPosts2(data)
-      }).catch((error) => {
-        console.error(error);
-      });
       
+        setPosts(data)
     }
   }, [selectedTag]);
   
 
-  useEffect(() => {
-    let tag  = {
-      "label" : query.tag
+useEffect(() => {
+  let tag = {
+    map: {
+      label: query.tag
     }
+  };
 
     if(query?.tag){
         setSelectedTag(tag)
@@ -68,7 +61,7 @@ export default function Index({ globalData,data }) {
     }
 
   }, [query]);
-  
+ 
   return (
    <div >
      <HeaderWeb pageType={"index"} handleTagClick={handleTagClick} name={globalData.name} />    
@@ -76,7 +69,7 @@ export default function Index({ globalData,data }) {
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <main className="w-full">
         <ul className="w-full">
-        {clientPosts2.map((post, index) => (
+        {posts.map((post, index) => (
             <li
               key={post.fields.slug}
               className="md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg bg-white dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 transition border border-gray-800 dark:border-white border-opacity-10 dark:border-opacity-10 border-b-0 last:border-b hover:border-b hovered-sibling:border-t-0"

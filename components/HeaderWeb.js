@@ -47,7 +47,7 @@ const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
 
     const handleOnClick = () => {
        console.log("click");
-       //router.push({ pathname: '/', query: { tag: "All" } });
+       handleTagClick(null)
        router.push({ pathname: '/'});
     }
     console.log("page",pageType)
