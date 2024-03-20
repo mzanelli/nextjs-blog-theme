@@ -37,6 +37,7 @@ const router = useRouter();
   };
 
 useEffect(() => {
+    console.log("tag",selectedTag)
     if(selectedTag){
           const filteredPosts = filterPostsByTag(selectedTag);
           setPosts(filteredPosts);
