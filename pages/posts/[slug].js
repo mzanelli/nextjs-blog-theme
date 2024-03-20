@@ -26,7 +26,7 @@ export default function PostPage({
   const showPrevPostButton = prevPost !== null;
   const showNextPostButton = nextPost !== null;
   const router = useRouter();
-  const handleTagClick = (tag) => {
+  const handleTagClick = (tag) => { 
     if(tag){
         console.log("tag",tag.map.label)
         const queryParams = new URLSearchParams({ tag: tag.map.label }).toString();
