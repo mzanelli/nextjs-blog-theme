@@ -54,6 +54,7 @@ const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
   return (
     <>
       <Modal
+       
        isOpen={isOpen} 
        onRequestClose={closeModal} 
        className="Modal"
@@ -65,8 +66,12 @@ const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
              <a href="#" onClick={() => handleOnClick()}>
                   <div className='navi-logo'> 
                     <SVGLogoWeb />
-                    <div className='navi-cia'>{name}</div>
+                    <div>
+                      <div className='navi-cia'>{name}</div>
+                      <div className='subtitle'>Shouth America News</div>
+                    </div>
                   </div>
+                  
               </a>
               {( <div className="hamburger-container">
                   <FontAwesomeIcon onClick={openModal} className="hamburger" icon={faBars} />

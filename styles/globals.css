@@ -138,6 +138,14 @@ body {
   justify-content: space-between;
 }
 
+.subtitle{
+  color: #fff;
+  font-size: 11px;
+  position: fixed;
+  top: 30px;
+  left: 47px;
+}
+
 .navi-logo{
   display: flex;
 }
@@ -178,7 +186,7 @@ body {
   top: 60px;
   right: 5px;
   background-color: #cbd5eb;
-  width: 350px;
+  width: 200px;
   border-color: #fff;
   transition: transform 0.3s ease-in-out;
 }
@@ -201,6 +209,11 @@ body {
   justify-content: flex-end;
   margin:8px;
 }
+.tag-title{
+  padding-left:24px;
+  padding-top:18px;
+  font-weight: bold;
+}
 
 .drawer-menu-title{
   margin: 8px;
@@ -210,9 +223,11 @@ body {
   margin-left: 25px;
 }
 
-.drawer-menu{
-  display: flex;
+.drawer{
+}
 
+.drawer-menu{
+  padding-bottom: 8px;
 }
 
 .drawer-item{

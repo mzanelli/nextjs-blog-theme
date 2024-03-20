@@ -54,32 +54,18 @@ const Drawer = ({ close ,handleTagClick }) => {
         <FontAwesomeIcon onClick={handleClose} icon={faClose} />
       </header>
       <hr />
+      <div className='tag-title'>Tags</div>
       <div className="drawer-menu">
         <div className="drawer-column">
           <ul className="drawer-list">
-            {tags.map((tag, index) => index % 2 === 0 && (
+            {tags.map((tag, index) => (
               <li key={index} className="drawer-item">
                 <span
                   style={{ cursor: 'pointer' }}
                   onClick={() => handleTagClickDrawer(tag)}
                 >
                   {tag}
-                  <FontAwesomeIcon className="right-arrow" icon={faArrowRight} />
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="drawer-column">
-          <ul className="drawer-list">
-            {tags.map((tag, index) => index % 2 !== 0 && (
-              <li key={index} className="drawer-item">
-                <span
-                  style={{ cursor: 'pointer' }}
-                  onClick={() => handleTagClickDrawer(tag)}
-                >
-                  {tag}
-                  <FontAwesomeIcon className="right-arrow" icon={faArrowRight} />
+                 
                 </span>
               </li>
             ))}
