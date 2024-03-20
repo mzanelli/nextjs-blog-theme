@@ -31,6 +31,14 @@ const HeaderWeb = ({ name, tags ,handleTagClick ,pageType}) => {
 
     gtag('config', 'G-0EQ65L7WPY');
 
+    gtag('consent', 'default', {
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500,
+    });
+
     return () => {
       document.body.removeChild(googleAnalyticsScript);
       document.body.removeChild(adsenseScript);
