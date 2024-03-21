@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://chronist.netlify.app/posts/falklands:-record-loligo-catch</loc>
+    <lastmod>2023-07-06T23:45</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/u.n.-adopts-historic-agreement-on-marine-biodiversity</loc>
+    <lastmod>2023-07-06T23:45</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/aerolíneas-argentinas-48-hour-strike-for-easter</loc>
+    <lastmod>2024-03-21T12:48</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/falkland-islands-celebrates-the-25th-anniversary</loc>
+    <lastmod>2024-03-21T12:48</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/brazils-copom-further-lowers-selic-interest-rate</loc>
+    <lastmod>2024-03-21T12:48</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/fish-and-chips:-“the-unscrupulous-british”-had</loc>
+    <lastmod>2024-03-21T12:47</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/uruguay-braces-for-heavy-storm</loc>
+    <lastmod>2024-03-21T12:47</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/brazil:-dengue-cases-so-far-in-2024-surpass</loc>
+    <lastmod>2024-03-21T12:46</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/milei-deepens-ties-with-washington-by-choosing</loc>
+    <lastmod>2024-03-21T12:46</lastmod>
+  </url>
+  <url>
     <loc>https://chronist.netlify.app/posts/lufthansa-flight-makes-emergency-landing-in-rosario</loc>
     <lastmod>2024-03-20T20:13</lastmod>
   </url>
@@ -165,6 +201,14 @@
     <lastmod>2024-03-20T14:00</lastmod>
   </url>
   <url>
+    <loc>https://chronist.netlify.app/posts/paraná-waterway-conflict:-paraguayan-barge-released-after-paying-toll</loc>
+    <lastmod>2024-03-20T14:00</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/disqualification-of-maría-corina-machado-shadows-venezuelas-path-to-reconciliation</loc>
+    <lastmod>2024-03-20T14:00</lastmod>
+  </url>
+  <url>
     <loc>https://chronist.netlify.app/posts/joint-statement-issued-against-the-arrest-of-venezuelan-opposition-activist</loc>
     <lastmod>2024-03-20T14:00</lastmod>
   </url>
@@ -269,10 +313,6 @@
     <lastmod>2024-03-20T13:50</lastmod>
   </url>
   <url>
-    <loc>https://chronist.netlify.app/posts/police-indict-bolsonaro-in-vaccine-certification-fraud-probe</loc>
-    <lastmod>2024-03-20T13:50</lastmod>
-  </url>
-  <url>
     <loc>https://chronist.netlify.app/posts/lula-picks-rosa-weber-for-mercosur-court</loc>
     <lastmod>2024-03-20T13:50</lastmod>
   </url>
@@ -309,6 +349,10 @@
     <lastmod>2024-03-20T13:40</lastmod>
   </url>
   <url>
+    <loc>https://chronist.netlify.app/posts/falklands-government-donation-to-red-cross-appeal-for-israel-and-occupied-palestinian-territory</loc>
+    <lastmod>2024-03-20T13:40</lastmod>
+  </url>
+  <url>
     <loc>https://chronist.netlify.app/posts/a-malvinas-april-2nd-parade-in-front-of-argentine-congress</loc>
     <lastmod>2024-03-20T13:40</lastmod>
   </url>
@@ -329,18 +373,6 @@
     <lastmod>2023-07-07T12:18</lastmod>
   </url>
   <url>
-    <loc>https://chronist.netlify.app/posts/argentine-jurist-chosen-for-international-sea-law-court</loc>
-    <lastmod>2023-07-06T23:45</lastmod>
-  </url>
-  <url>
-    <loc>https://chronist.netlify.app/posts/falklands:-record-loligo-catch,-53,578-tons,-fifth-year-in-a-row</loc>
-    <lastmod>2023-07-06T23:45</lastmod>
-  </url>
-  <url>
-    <loc>https://chronist.netlify.app/posts/u.n.-adopts-historic-agreement-on-marine-biodiversity;-new-hope-for-the-oceans,-guterres</loc>
-    <lastmod>2023-07-06T23:45</lastmod>
-  </url>
-  <url>
     <loc>https://chronist.netlify.app/posts/iceland-suspends-whale-hunting-until-august-32;-public-opinion-supports-decision</loc>
     <lastmod>2023-07-06T23:45</lastmod>
   </url>
@@ -356,5 +388,16 @@
     <loc>https://chronist.netlify.app/posts/argentina-insists-on-local-currency-agreements-within-mercosur</loc>
     <lastmod>2023-07-06T12:15</lastmod>
   </url>
-  </urlset>
- 
+  <url>
+    <loc>https://chronist.netlify.app/posts/mercosur-leaders-show-support-to-massa</loc>
+    <lastmod>2023-07-06T12:15</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/paraguay,-uruguay-urge-mercosur-to-speak-up-about-situation-in-venezuela</loc>
+    <lastmod>2023-07-06T12:15</lastmod>
+  </url>
+  <url>
+    <loc>https://chronist.netlify.app/posts/mercosur-challenges-eus-environmental-demands-in-fta;-uruguay-goes-rogue-again</loc>
+    <lastmod>2023-07-06T12:15</lastmod>
+  </url>
+</urlset>
