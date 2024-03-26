@@ -15,7 +15,7 @@ export default function Index({ globalData,data }) {
 
   const [posts, setPosts] = useState(data);
   const [selectedTag, setSelectedTag] = useState("")
-const router = useRouter();
+  const router = useRouter();
   const { query } = router;
 
   const handleTagClick = (tag) => {
@@ -89,7 +89,7 @@ useEffect(() => {
                 {post.fields.entryTitle && <h2 className="text-2xl md:text-3xl mt-2 ">
                   {post.fields.entryTitle.slice(0, 140)}</h2>}                  
                   {post.fields.dateCreated && (
-                    <p style={{ fontSize: "13px" }} className="opacity-20">
+                    <p style={{ fontSize: "13px" }} >
                       {new Date(post.fields.dateCreated).toLocaleDateString()}
                     </p>
                   )}
