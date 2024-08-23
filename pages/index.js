@@ -23,18 +23,20 @@ export default function Index({ globalData,data }) {
   };
 
   const filterPostsByTag = (tag) => {
-    if (tag) {
+    if (tag?.map?.label) {
       let filter = [];
-      for (const post of data) {
-        for (const aTag of post.fields.tags.myArrayList){
-            if(aTag.map.label === tag.map.label){
-              filter.push(post)
-            }
-        }
-      }
+      data.forEach(post => {
+        post.fields.tags.myArrayList.forEach(aTag => {
+          if (aTag?.map?.label && aTag.map.label.toLowerCase() === tag.map.label.toLowerCase()) {
+            filter.push(post);
+          }
+        });
+      });
       return filter;
     }
+    return [];
   };
+  
   
 
 useEffect(() => {

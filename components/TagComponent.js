@@ -10,7 +10,7 @@ const TagsComponent = ({ tags, handleTagClick, selectedTag }) => {
       {tags.map((tag, index) => (
         <div
           key={index}
-          className={`tag ${selectedTag?.map?.label === tag.map.label ? 'selected' : ''}`}
+          className={`tag ${selectedTag?.map?.label.toLowerCase() === tag.map.label.toLowerCase() ? 'selected' : ''}`}
           onClick={() => handleClick(tag)}
         >
           {tag.map.label}
